@@ -58,3 +58,11 @@ Array.prototype.swapArray = function(index1, index2){
 	console.log(index1,index2)
     return this;
 }
+//ajax全局事件
+//ajax全局事件 , 必须绑定在document身上
+$(document).on('ajaxStart',function(){//ajax请求发送时触发,ajax的全局方法(所有的ajax)
+	NProgress.start()//进度条插件
+})
+$(document).on('ajaxComplete',function(){//ajax请求完成时触发,ajax的全局方法(所有的ajax)
+	 NProgress.done()//进度条插件
+})
