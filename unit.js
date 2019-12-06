@@ -66,3 +66,11 @@ $(document).on('ajaxStart',function(){//ajax请求发送时触发,ajax的全局�
 $(document).on('ajaxComplete',function(){//ajax请求完成时触发,ajax的全局方法(所有的ajax)
 	 NProgress.done()//进度条插件
 })
+//显示上传的图片
+$("input").change(function(){
+        var files = this.files;
+        if(!files.length) {
+            return;
+        }
+        $("img").attr("src", window.URL.createObjectURL(files[0]));
+    });
