@@ -77,3 +77,4 @@ $("input").change(function(){
 	console.log(0 == '')//true
 	Array.splice(index,1)//删除数组中下标为index的元素,返回删除后的新数组
 	Array.splice(index , 0 , 1);//向数组指定位置中插入一个元素,返回插入后的新数组
+if(0) , if(''),if(undefined),if(null) 全是假
